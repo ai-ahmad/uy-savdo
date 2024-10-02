@@ -9,12 +9,13 @@
     /* font-family: "DM Sans", sans-serif; */
     /* font-family: "San Francisco" */
     font-family: 'SF Pro Display', sans-serif;
+    overflow: ;
 }
 
 
 .container {
     max-width: 100%;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -381,6 +382,29 @@ footer {
 
 }
 
+.LanguageSelect {
+    width: 100px;
+    color: #fff;
+    font-size: 20px;
+    background-color: transparent;
+    text-align: center;
+    border: 1px solid var(--white-premium);
+    border-radius: 20px;
+    outline: none;
+    transition: ease 300ms;
+
+}
+
+.LanguageSelect:hover {
+    transition: ease 300ms;
+}
+
+
+.options {
+    transition: ease 300ms;
+    background-color: #B4C29E;
+    width: 80px;
+}
 
 /* Mediya only screen */
 
@@ -458,9 +482,7 @@ footer {
     }
 
 
-    .main-item-left {
-        gap: 16px;
-    }
+
 
     .icons-telephone {
         position: absolute;
@@ -493,7 +515,10 @@ footer {
 
     }
 
+    .main-item-left{
+        margin-top: 35px;
 
+    }
 
     .right-img {
         max-width: 100%;
