@@ -474,11 +474,6 @@ footer {
         margin-bottom: 20px;
     }
 
-    .icons-telephone {
-        position: absolute;
-        bottom: 100px;
-        left: -20px;
-    }
 
 
 
@@ -509,12 +504,14 @@ footer {
 }
 
 @media only screen and (max-width: 832px) {
-    .nav-icons {
+    .nav-icons-buttons {
         display: none;
 
     }
 
-    .main-item-left{
+
+
+    .main-item-left {
         margin-top: 35px;
 
     }
@@ -538,7 +535,7 @@ footer {
         padding: 20px 0;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
     }
 
     .main-wrapper {
@@ -605,6 +602,8 @@ footer {
         justify-content: space-between;
         gap: 10px;
     }
+
+
 
 }
 
@@ -833,5 +832,13 @@ footer {
 
     100% {
         transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width: 872px) {
+    .icons-telephone {
+        position: absolute;
+        bottom: 50px;
+        right: 30px;
     }
 }
