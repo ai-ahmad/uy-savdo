@@ -45,12 +45,43 @@
                 <a href=""> <img src="./img/Google-Play.png" alt="" /> </a>
               </button>
 
-              <select class="LanguageSelect" id="selectLanguage">
-                <option class="options" value="UZ">UZ</option>
-                <option class="options" value="RU">RU</option>
-                <option class="options" value="TUR">TUR</option>
-                <option selected class="options" value="EN">ENG</option>
-              </select>
+              <div class="language-select-wrapper">
+                <img
+                  src="./img/uzflag.svg"
+                  alt="UZ Flag"
+                  id="flagIcon"
+                  class="flag-icon"
+                />
+                <select
+                  class="language-select"
+                  id="selectLanguage"
+                  onchange="updateFlag()"
+                >
+                  <option value="UZ" data-flag="./img/uzflag.svg">UZ</option>
+
+                  <option
+                    value="RU"
+                    data-flag="https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Russia.svg"
+                  >
+                    RU
+                  </option>
+
+                  <option
+                    value="TUR"
+                    data-flag="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg"
+                  >
+                    TUR
+                  </option>
+
+                  <option
+                    selected
+                    value="EN"
+                    data-flag="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
+                  >
+                    ENG
+                  </option>
+                </select>
+              </div>
             </div>
           </nav>
         </div>
@@ -132,7 +163,7 @@
               />
             </div>
             <div class="about-title">
-              <h2 data-aos="fade-left" class="about-text">About us</h2>
+              <h2  data-aos="flip-down" class="about-text">About us</h2>
               <p
                 data-aos="fade-up"
                 data-aos-anchor-placement="center-center"

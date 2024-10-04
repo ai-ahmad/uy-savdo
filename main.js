@@ -1,4 +1,4 @@
-let selects = document.querySelector('.LanguageSelect')
+let selects = document.querySelector('.language-select')
 
 
 selects.addEventListener('change', function () {
@@ -19,3 +19,14 @@ selects.addEventListener('change', function () {
     }
 
 })
+
+function updateFlag() {
+    const selectElement = document.getElementById("selectLanguage");
+    const selectedOption =
+        selectElement.options[selectElement.selectedIndex];
+    const flagIcon = document.getElementById("flagIcon");
+
+    flagIcon.src = selectedOption.getAttribute("data-flag");
+}
+
+updateFlag();
