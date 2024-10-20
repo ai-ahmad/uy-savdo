@@ -10,6 +10,10 @@
 }
 
 
+body {
+    overflow-x: hidden;
+}
+
 .container {
     max-width: 100%;
     width: 85%;
@@ -26,8 +30,9 @@
 
 }
 
-.header {
+.header,footer {
     background: var(--global-color);
+    color: white;
 
 }
 
@@ -37,41 +42,84 @@
     align-items: center;
     justify-content: space-between;
 
+}.button-cals {
+    display: flex !important;
+    align-items: center; 
+    gap: 10px;
+    background-image: linear-gradient(to right, #21A5A1 0%, #2DA7A3 51%, #85B79F 100%);
+    padding: 10px 12px;
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+    font-size: 15px; /* Default font size */
 }
 
-.button-cals {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px 0;
-    width: 200px;
-    background-color: transparent;
-    border: none;
-    border-radius: 20px;
-    border: 2px solid var(--white-premium);
-    transition: 300ms;
-
+.button-cals > a {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+    transition: color 0.5s ease-in-out;
 }
 
 .button-cals:hover {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 10px 0;
-    width: 200px;
-    border: none;
-    border-radius: 20px;
-    border: 2px solid var(--white-premium);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    transition: 300ms;
-
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
 }
 
-.button-cals a {
-    color: var(--white-premium);
+.button-cals:hover a {
+    animation: ColorHover 4s ease-in-out infinite;
+}
 
+@keyframes ColorHover {
+    0% {
+        color: #e9ece7;
+    }
+    20% {
+        color: #CCE9E5;
+    }
+    40% {
+        color: #ececec;
+    }
+    60% {
+        color: #e7e4e4;
+    }
+    80% {
+        color: #f0eded;
+    }
+    100% {
+        color: #75d3cd;
+    }
+}
+
+/* Color animation */
+@keyframes Color {
+    0% {
+        color: #A0D468;
+    }
+    20% {
+        color: #4FC1E9;
+    }
+    40% {
+        color: #FFCE54;
+    }
+    60% {
+        color: #FC6E51;
+    }
+    80% {
+        color: #ED5565;
+    }
+    100% {
+        color: #AC92EC;
+    }
 }
 
 .nav-icons {
@@ -113,6 +161,12 @@
 }
 
 
+header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
 .icons-telephone {
     position: absolute;
     bottom: 20px;
@@ -121,8 +175,8 @@
 
 .top-icons {
     display: flex;
-    justify-content: space-around;
-    gap: 10px;
+    justify-content: space-between;
+    gap: 30px;
     margin-bottom: 40px;
 }
 
@@ -132,6 +186,68 @@
     justify-content: space-around;
     gap: 20px;
 }
+
+
+
+.language-select-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .flag-icon {
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .language-select {
+    padding-left: 40px; /* Отступ для флагов */
+    background: url('./img/uzflag.svg') no-repeat left center; /* Изображение флага по умолчанию */
+    background-size: 25px 15px; /* Размер флага */
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+  }
+
+
+  .dropdown {
+    background-color: #A2BF9F;
+  }
+  
+  .language-select option {
+    padding-left: 30px;
+  }
+  
+  /* Использование псевдоэлементов для отображения флагов внутри опций */
+  .language-select option[value="UZ"] {
+    background-image: url('./img/uzflag.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 25px 15px;
+  }
+  
+  .language-select option[value="RU"] {
+    background-image: url('./img/ruflag.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 25px 15px;
+  }
+  
+  .language-select option[value="TUR"] {
+    background-image: url('./img/turflag.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 25px 15px;
+  }
+  
+  .language-select option[value="EN"] {
+    background-image: url('./img/ukflag.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 25px 15px;
+  }
+  
 
 .main-wrapper {
     position: relative;
@@ -222,6 +338,7 @@
     color: grey;
     font-family: DM Sans;
     font-size: 18px;
+    max-width: 400px;
     font-weight: 400;
     line-height: 28px;
     letter-spacing: -0.4000000059604645px;
@@ -381,9 +498,9 @@ footer {
     font-family: DM Sans;
     font-size: 16px;
     font-weight: 700;
+    color: white;
     line-height: 26px;
     letter-spacing: -0.35555556416511536px;
-    color: var(--blackPremium);
 
 }
 
@@ -784,11 +901,13 @@ option {
     }
 }
 
+
 /* keyframes */
 .keys {
     animation-name: example;
     animation-duration: 3s;
     animation-iteration-count: infinite;
+    width: 100px;
 }
 
 .keys-bottom {

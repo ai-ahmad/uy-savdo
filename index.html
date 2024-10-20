@@ -1,294 +1,366 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
-      rel="stylesheet"
-    /> -->
-    <!-- fotns -->
-    <link
-      href="https://fonts.cdnfonts.com/css/sf-pro-display"
-      rel="stylesheet"
-    />
-    <!-- fotns -->
-    <link rel="stylesheet" href="./main.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <div class="header">
-        <div class="container">
-          <nav class="header-nav">
-            <button class="button-cals">
-              <img src="./img/call.png" alt="telephone" />
-              <a href="tel: +998 99 987-65-43">+998 99 987-65-43</a>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Markaziy Osiyodagi ko'chmas mulk uchun eksklyuziv mahsulotlarni toping. Eng yaxshi takliflar va sizning ko'chmas mulkingiz uchun eng yaxshi bitimlar." />
+  <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
+  <link rel="stylesheet" href="./main.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@latest/dist/core.js"></script>
+  <title>Eksklyuziv Mahsulotlar - Markaziy Osiyo uchun ko'chmas mulkingiz manbai</title>
+
+  <style>
+    body {
+      font-family: 'SF Pro Display', sans-serif;
+    }
+
+
+
+    .typewriter-text {
+      font-size: 2rem;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      /* Удаляем border-right и анимацию мигания */
+      /* border-right: 3px solid; */
+      animation: typing 3s steps(40, end);
+    }
+
+    .Typewriter__wrapper {
+      max-width: 200px;
+    }
+
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: 100%;
+      }
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      min-width: 160px;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .dropdown-content a img {
+      margin-right: 10px;
+      width: 20px;
+      height: 14px;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #A3BE9E;
+    }
+
+    .dropbtn {
+      background-color: #A3BE9E;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .dropbtn img {
+      margin-right: 10px;
+      width: 30px;
+      height: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="container">
+        <nav class="header-nav">
+          <button class="button-cals">
+            <img src="./img/call.png" alt="telefon" />
+            <a href="tel: +998 99 987-65-43">+998 99 987-65-43</a>
+          </button>
+
+          <a href="#"> <img src="./img/newLOgo.png" alt="Kompaniya logosi" /> </a>
+
+          <div class="nav-icons">
+            <button class="nav-icons-buttons">
+              <a href=""> <img src="./img/micrasoft.png" alt="Windows" /> </a>
+            </button>
+            <button class="nav-icons-buttons">
+              <a href="">
+                <img src="./img/Combined Shape.png" alt="apple" />
+              </a>
+            </button>
+            <button class="nav-icons-buttons">
+              <a href=""> <img src="./img/Google-Play.png" alt="" /> </a>
             </button>
 
-            <a href="#"> <img src="./img/newLOgo.png" alt="Logo" /> </a>
-
-            <div class="nav-icons">
-              <button class="nav-icons-buttons">
-                <a href=""> <img src="./img/micrasoft.png" alt="Windows" /> </a>
+            <div class="dropdown">
+              <button class="dropbtn" id="flagButton">
+                <img id="flagIcon" src="./img/uzflag.svg" alt="UZ Flag"> Uzbek
               </button>
-              <button class="nav-icons-buttons">
-                <a href="">
-                  <img src="./img/Combined Shape.png" alt="apple" />
-                </a>
-              </button>
-              <button class="nav-icons-buttons">
-                <a href=""> <img src="./img/Google-Play.png" alt="" /> </a>
-              </button>
-              <!-- flags -->
-              <div class="language-select-wrapper">
-                <img
-                  src="./img/uzflag.svg"
-                  alt="UZ Flag"
-                  id="flagIcon"
-                  class="flag-icon"
-                />
-                <select
-                  class="language-select"
-                  id="selectLanguage"
-                  onchange="updateFlag()"
-                >
-                  <option selected value="UZ" data-flag="./img/uzflag.svg">
-                    UZ
-                  </option>
-
-                  <option
-                    value="RU"
-                    data-flag="https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Russia.svg"
-                  >
-                    RU
-                  </option>
-
-                  <option
-                    value="TUR"
-                    data-flag="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg"
-                  >
-                    TUR
-                  </option>
-
-                  <option
-                    value="EN"
-                    data-flag="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg"
-                  >
-                    ENG
-                  </option>
-                </select>
+              <div class="dropdown-content">
+                <a href="/LangRu.html" onclick="changeLanguage('Russian', './img/ruflag.svg')"><img src="./img/ruflag.svg" alt="RU Flag"> Russian</a>
+                <a href="/LangеTur.html" onclick="changeLanguage('Turkish', './img/turflag.svg')"><img src="./img/turflag.svg" alt="TUR Flag"> Turkish</a>
+                <a href="/LangEng.html" onclick="changeLanguage('English', './img/flgaseng.jpg')"><img src="./img/flgaseng.jpg" alt="ENG Flag"> English</a>
               </div>
             </div>
-          </nav>
-        </div>
+
+          </div>
+        </nav>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="main-section">
-        <div class="container">
-          <div class="main-wrapper">
-            <div class="main-item-left">
-              <h1 class="main-left-text">EKSKLUZIV PRODUKTLAR</h1>
-
-              <p data-aos="fade-right" class="main-left-info">
-                для недвижимости в Центральной Азии
-              </p>
-              <div
-                data-aos="fade-right"
-                data-aos-offset="300"
-                data-aos-easing="ease-in-sine"
-                class="main-playmarket"
-              >
-                <a href="">
-                  <img width="" src="./img/appstore.png" alt="" />
-                </a>
-                <a href="">
-                  <img width="" src="./img/googleplay.png" alt="" />
-                </a>
-                <a class="win" href="">
-                  <img width="" src="./img/win.png" alt="" />
-                </a>
-              </div>
-            </div>
-
-            <div class="right-imgabsalute">
-              <img class="img-rigt" src="./img/exsemple (2).png" alt="" />
-              <div class="icons-telephone">
-                <div class="top-icons">
-                  <a class="keys" href="#">
-                    <img
-                      class="icons-all"
-                      src="./img/apartment.svg"
-                      alt="apartment"
-                    />
-                  </a>
-                  <a class="keys" href="#">
-                    <img class="icons-all" src="./img/empty.svg" alt="empty" />
-                  </a>
-                  <a class="keys" href="#">
-                    <img class="icons-all" src="./img/house.png" alt="cs"
-                  /></a>
-                </div>
-                <div class="bottom-icons">
-                  <a class="keys-bottom" href="#">
-                    <img class="icons-all" src="./img/dom.png" alt="resident" />
-                  </a>
-                  <a class="keys-bottom" href="#">
-                    <img class="icons-all" src="./img/dom2.png" alt="empty" />
-                  </a>
-                  <a class="keys-bottom" href="#">
-                    <img class="icons-all" src="./img/cs.png" alt="cs"
-                  /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="about">
-        <div class="about-bg">
-          <div class="about-us">
-            <div class="left-img-about">
-              <img
-                data-aos="fade-up-right"
-                class="left-img"
-                src="./img/phone.png"
-                alt="Phone"
-              />
-            </div>
-            <div class="about-title">
-              <h2 data-aos="flip-down" class="about-text">About us</h2>
-              <p
-                data-aos="fade-up"
-                data-aos-anchor-placement="center-center"
-                class="about-info"
-              >
-                We've done it carefully and simply. Combined with the
-                ingredients makes for beautiful landings. It is definitely the
-                tool you need to speed up your design process. We've done it
-                carefully and simply. Combined with the ingredients makes for
-                beautiful landings. It is definitely the tool you need to speed
-                up your design process. We've done it carefully and simply.
-                Combined with the ingredients makes for beautiful landings. It
-                is definitely the tool you need to speed up your design process.
-              </p>
-            </div>
-          </div>
-          <span class="span"></span>
-          <div class="container">
-            <div data-aos="flip-left" class="about-list">
-              <div class="card">
-                <h3 class="card-title">Easy</h3>
-                <p class="card-text">
-                  A high quality solution beautifully designed for startups
-                </p>
-              </div>
-              <div class="card">
-                <h3 class="card-title">Comfortable</h3>
-                <p class="card-text">
-                  A high quality solution beautifully designed for startups
-                </p>
-              </div>
-              <div class="card">
-                <h3 class="card-title">Safe</h3>
-                <p class="card-text">
-                  A high quality solution beautifully designed for startups
-                </p>
-              </div>
-              <div class="card">
-                <h3 class="card-title">Fast</h3>
-                <p class="card-text">
-                  A high quality solution beautifully designed for startups
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div class="telegram-bg">
-          <div class="container">
-            <div class="telegram-wrapper">
-              <div class="telegram-left">
-                <div data-aos="fade-right" class="telegram-box">
-                  <h3 class="telegram-title">
-                    Telegram bot and Telegram chanel
-                  </h3>
-                  <p class="telegram-text">
-                    We try to create interesting things for my products to
-                    attract customers and it is a worthy investment for the
-                    future.
-                  </p>
-                </div>
-                <ul data-aos="fade-down-right" class="telegram-list">
-                  <li class="list-text">
-                    <img src="./img/Icon.png" alt="" />
-                    It's great that the templates are well designed with our
-                    company
-                  </li>
-                  <li class="list-text">
-                    <img src="./img/Icon.png" alt="" />
-                    It's great that the templates are well designed with our
-                    company
-                  </li>
-                  <li class="list-text">
-                    <img src="./img/Icon.png" alt="" />
-                    It's great that the templates are well designed with our
-                    company
-                  </li>
-                  <li class="list-text">
-                    <img src="./img/Icon.png" alt="" />
-                    It's great that the templates are well designed with our
-                    company
-                  </li>
-                </ul>
-              </div>
-              <img
-                data-aos="zoom-in-up"
-                class="right-img"
-                src="./img/Screen.png"
-                alt="screen"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer>
+  <main>
+    <section class="main-section">
       <div class="container">
-        <div class="footer-wrapper">
-          <div class="footer-iocns">
-            <a href="">
-              <img src="./img/image 23.png" alt="" />
-            </a>
-            <a href="">
-              <img src="./img/ins.png" alt="" />
-            </a>
-            <a href="">
-              <img src="./img/image.png" alt="" />
-            </a>
-            <a href="">
-              <img src="./img/Facebook.png" alt="" />
-            </a>
+        <div class="main-wrapper">
+          <div class="main-item-left">
+            <h1 id="typewriter-main" class="typewriter"></h1>
+            <p id="typewriter-sub" data-aos="fade-right" class="main-left-info typewriter-text"></p>
+            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="main-playmarket">
+              <a href=""><img src="./img/appstore.png" alt="App Store'dan yuklab oling" /></a>
+              <a href=""><img src="./img/googleplay.png" alt="Google Play'dan yuklab oling" /></a>
+              <a class="win" href=""><img src="./img/win.png" alt="Windows uchun yuklab oling" /></a>
+            </div>
           </div>
-          <div class="footer-box-link">
-            <a class="footer-link" href="">Privacy Policy</a>
-            <a class="footer-link" href="">Terms & Conditions</a>
+
+          <div class="right-imgabsalute" data-aos="zoom-in-up">
+            <img class="img-rigt" src="./img/exsemple (2).png" alt="Mahsulot Rasmi" />
+            <div class="icons-telephone">
+              <div class="top-icons">
+                <a class="keys" href="#"><img class="icons-all" src="./img/apartment.svg" alt="apartament" /></a>
+                <a class="keys" href="#"><img class="icons-all" src="./img/empty.svg" alt="bo'sh" /></a>
+                <a class="keys" href="#"><img class="icons-all" src="./img/house.png" alt="uy" /></a>
+              </div>
+              <div class="bottom-icons">
+                <a class="keys-bottom" href="#"><img class="icons-all" src="./img/dom.png" alt="uy" /></a>
+                <a class="keys-bottom" href="#"><img class="icons-all" src="./img/dom2.png" alt="uy" /></a>
+                <a class="keys-bottom" href="#"><img class="icons-all" src="./img/cs.png" alt="cs" /></a>
+              </div>
+            </div>
           </div>
-          <p class="footer-text">2024 All rights reserved.</p>
         </div>
       </div>
-    </footer>
-    <script src="./main.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+    </section>
+
+    <section class="about">
+      <div class="about-bg">
+        <div class="about-us">
+          <div class="left-img-about" data-aos="fade-up-right">
+            <img class="left-img" src="./img/phone.png" alt="Telefon" />
+          </div>
+          <div class="about-title">
+            <h2 id="typewriter-about" class="about-text typewriter"></h2>
+            <p id="typewriter-about-text" data-aos="fade-up" data-aos-anchor-placement="center-center"
+              class="about-info"></p>
+          </div>
+        </div>
+        <span class="span"></span>
+        <div class="container">
+          <div data-aos="flip-left" class="about-list">
+            <div class="card">
+              <h3 class="card-title">Easy</h3>
+              <p class="card-text">
+                A high quality solution beautifully designed for startups
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Comfortable</h3>
+              <p class="card-text">
+                A high quality solution beautifully designed for startups
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Safe</h3>
+              <p class="card-text">
+                A high quality solution beautifully designed for startups
+              </p>
+            </div>
+            <div class="card">
+              <h3 class="card-title">Fast</h3>
+              <p class="card-text">
+                A high quality solution beautifully designed for startups
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section>
+      <div class="telegram-bg">
+        <div class="container">
+          <div class="telegram-wrapper">
+            <div class="telegram-left">
+              <div data-aos="fade-right" class="telegram-box">
+                <h3 class="telegram-title typewriter" id="typewriter-telegram"></h3>
+                <p class="telegram-text typewriter" id="typewriter-telegram-text"></p>
+              </div>
+              <ul data-aos="fade-down-right" class="telegram-list">
+                <li class="list-text">
+                  <img src="./img/Icon.png" alt="Uy ikonkasi" />
+                  Har bir uy loyihasi zamonaviy va energiya tejamkor texnologiyalar asosida ishlab chiqilgan.
+                </li>
+                <li class="list-text">
+                  <img src="./img/Icon.png" alt="Uy ikonkasi" />
+                  Bizning shablonlarimiz qulay joylashuv va interyer dizaynida ideal yechimni taqdim etadi.
+                </li>
+                <li class="list-text">
+                  <img src="./img/Icon.png" alt="Uy ikonkasi" />
+                  Shahar shovqinidan uzoqda, tabiiy muhitda joylashgan uylar bizda mavjud.
+                </li>
+                <li class="list-text">
+                  <img src="./img/Icon.png" alt="Uy ikonkasi" />
+                  Uyingiz uchun shinam va zamonaviy loyihalarni bizning kompaniyamiz orqali tanlang.
+                </li>
+                
+              </ul>
+            </div>
+            <img data-aos="zoom-in-up" class="right-img" src="./img/Screen.png" alt="ekran" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="footer-icons">
+          <a href=""><img src="./img/image 23.png" alt="social" /></a>
+          <a href=""><img src="./img/ins.png" alt="social" /></a>
+          <a href=""><img src="./img/image.png" alt="social" /></a>
+          <a href=""><img src="./img/Facebook.png" alt="Facebook" /></a>
+        </div>
+        <div class="footer-box-link">
+          <a class="footer-link" href="">Maxfiylik Siyosati</a>
+          <a class="footer-link" href="">Shartlar va Qoidalar</a>
+        </div>
+        <p class="footer-text">2024 Barcha huquqlar himoyalangan.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    AOS.init();
+    function changeLanguage(language, flagUrl) {
+      document.getElementById('flagIcon').src = flagUrl;
+      document.getElementById('flagButton').innerHTML = `<img id="flagIcon" src="${flagUrl}" alt="Flag"> ${language}`;
+    }
+
+    // Helper function to reset and start the typewriter effect if shouldResetTypewriter is true
+    function resetTypewriter(elementId, text) {
+      var element = document.getElementById(elementId);
+      element.innerHTML = ''; // Clear content before restarting the animation
+      var typewriter = new Typewriter(element, {
+        loop: false,
+        delay: 75,
+      });
+      typewriter.typeString(text).start();
+    }
+
+    const sections = [
+      { id: "typewriter-main", text: "Eksklyuziv Mahsulotlar" },
+      { id: "typewriter-sub", text: "Markaziy Osiyodagi ko'chmas mulk uchun" },
+      { id: "typewriter-about", text: "Biz Haqimizda" },
+      { id: "typewriter-about-text", text: `Biz "Uysavdo" kompaniyasida barcha jarayonlarni ehtiyotkorlik va soddalik bilan boshqaramiz. Turli mahsulotlar va xizmatlar birgalikda ajoyib uy xaridi tajribasini taqdim etishga imkon yaratadi. Bu, albatta, uy sotib olish va sotish jarayonlarini soddalashtirishga yordam beradigan asosiy vositadir. Biz har bir tafsilotga sinchkovlik bilan yondashamiz va qulaylikni ustuvor deb bilamiz. Mahsulotlarimiz va xizmatlarimiz birlashganda, mijozlarimiz uchun eng yaxshi uy xarid qilish imkoniyati paydo bo‘ladi. Shubhasiz, "Uysavdo" sizga sifatli va tezkor xizmatlar ko‘rsatish uchun ideal tanlovdir.` },
+      { id: "typewriter-telegram", text: "Telegram bot va Telegram kanal" },
+      { id: "typewriter-telegram-text", text: "Biz mahsulotlarimiz uchun qiziqarli narsalar yaratishga harakat qilamiz va bu kelajak uchun munosib sarmoyadir." }
+    ];
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const section = sections.find(s => s.id === entry.target.id);
+          if (section) {
+            resetTypewriter(section.id, section.text);
+          }
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.1
+    });
+
+    // Observe each typewriter element
+    sections.forEach(section => {
+      const element = document.getElementById(section.id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+    let selects = document.querySelector('.language-select')
+
+
+    selects.addEventListener('change', function () {
+
+      const selectedLanguage = this.value
+
+      if (selectedLanguage === "RU") {
+        window.location.href = "./LangRu.html";
+      }
+      if (selectedLanguage === "UZ") {
+        window.location.href = "index.html";
+      }
+      if (selectedLanguage === "EN") {
+        window.location.href = "./LangEng.html";
+      }
+      if (selectedLanguage === "TUR") {
+        window.location.href = "./LangеTur.html";
+      }
+
+    })
+
+    function updateFlag() {
+      const selectElement = document.getElementById("selectLanguage");
+      const selectedOption =
+        selectElement.options[selectElement.selectedIndex];
+      const flagIcon = document.getElementById("flagIcon");
+
+      flagIcon.src = selectedOption.getAttribute("data-flag");
+    }
+
+    updateFlag();
+  </script>
+</body>
+
 </html>
